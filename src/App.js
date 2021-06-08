@@ -20,7 +20,7 @@ function App() {
         <h1>A place to read and calm...</h1>
       </div>
       <div className="quote_box">
-        <h2>{quotes}</h2>
+        <h2>"{quotes}"</h2>
         <button onClick={fetchThoughts}>Next Quote &#128151; </button>
       </div>
     </div>
