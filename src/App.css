@@ -6,7 +6,11 @@
 .App {
   text-align: center;
   height: 100vh;
-  background: url("https://source.unsplash.com/user/erondu/1600x900");
+  background: url("./image/Image.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,6 +94,7 @@ button {
 button:hover {
   margin-top: 20px;
   background: rgb(105, 31, 31);
+
   border-radius: 25px;
   padding: 10px;
   border: 2px solid black;
@@ -97,4 +102,15 @@ button:hover {
   cursor: pointer;
   width: 150px;
   font-size: large;
+}
+
+@media only screen and (max-width: 600px) {
+  .quote_box {
+    width: 90%;
+    height: 30%;
+  }
+  .top_heading {
+    width: 90%;
+    height: 30%;
+  }
 }
