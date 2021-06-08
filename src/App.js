@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import "./App.css";
 
 function App() {
+  const [quotes, setQuotes] = useState("");
+  const fetchThoughts = () => {
+    fetch("https://api.adviceslip.com/advice")
+      .then((res) => res.json())
+      .then((data) => {
+        setQuotes(data.slip.advice);
+      });
+  };
+  useEffect(() => {
+    fetchThoughts();
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="top_heading">
+        <h1>A place to read and calm...</h1>
+      </div>
+      <div className="quote_box">
+        <h2>{quotes}</h2>
+        <button onClick={fetchThoughts}>Next Quote &#128151; </button>
+      </div>
     </div>
   );
 }

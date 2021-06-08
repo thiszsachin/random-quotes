@@ -1,5 +1,16 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
 .App {
   text-align: center;
+  height: 100vh;
+  background: url("https://source.unsplash.com/user/erondu/1600x900");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .App-logo {
@@ -35,4 +46,55 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.top_heading {
+  opacity: 0.7;
+  height: 5%;
+  width: 40%;
+  color: rgb(18, 95, 95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid rgb(18, 95, 95);
+  border-radius: 35px;
+  padding: 2%;
+  margin-bottom: 5%;
+  background-color: #a7a9ac;
+}
+.quote_box {
+  height: 25%;
+  padding-left: 2%;
+  padding-right: 2%;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(114, 125, 136);
+  border: 3px solid rgb(105, 31, 31);
+  color: rgb(105, 31, 31);
+  border-radius: 25px;
+  box-shadow: 10px 10px;
+}
+button {
+  margin-top: 20px;
+  background: none;
+  border-radius: 25px;
+  padding: 10px;
+  border: 2px solid black;
+  color: black;
+  font-size: medium;
+}
+
+button:hover {
+  margin-top: 20px;
+  background: rgb(105, 31, 31);
+  border-radius: 25px;
+  padding: 10px;
+  border: 2px solid black;
+  color: rgb(101, 146, 131);
+  cursor: pointer;
+  width: 150px;
+  font-size: large;
 }
